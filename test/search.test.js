@@ -17,3 +17,10 @@ test('should return empty array if empty string passed',(t)=>{
     t.deepEqual(actual,[]);
     t.end();
 })
+
+test('none of the strings returned should be empty',(t)=>{
+    const actual=search('po').every(item=>item!=='');
+    t.equal(actual,true);
+    t.end();
+    
+})
