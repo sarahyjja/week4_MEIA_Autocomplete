@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const querystring=require('querystring');
 const url=require('url');
+const search=require('./search');
+
 const router = (request, response) => {
 let endpoint = request.url
 if(endpoint === '/'){
@@ -28,8 +30,7 @@ if(endpoint.startsWith('/public')){
   let queryObject=querystring.parse(urlObject.query);
   //takes the value ('fluffyunicorn') of the 'q' property of queryObject
   let searchTerm=queryObject.q;
-  let result=['abcd','pqrs','asda','ertert'];
-  console.log(searchTerm);
+  let result=search(searchTerm);
   //tells the browser to expect a json file
   response.writeHead(200,{'content-type':'application/json'})
   //sends the response with a JSON version of the array of results
