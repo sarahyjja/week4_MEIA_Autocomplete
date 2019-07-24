@@ -28,8 +28,12 @@ if(endpoint.startsWith('/public')){
   let queryObject=querystring.parse(urlObject.query);
   //takes the value ('fluffyunicorn') of the 'q' property of queryObject
   let searchTerm=queryObject.q;
+  let result=['abcd','pqrs','asda','ertert'];
   console.log(searchTerm);
-  response.end(searchTerm);
+  //tells the browser to expect a json file
+  response.writeHead(200,{'content-type':'application/json'})
+  //sends the response with a JSON version of the array of results
+  response.end(JSON.stringify(result));
 
  }
 }
