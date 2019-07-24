@@ -12,7 +12,11 @@
   },
   "dependencies": {},
   "scripts": {
+<<<<<<< HEAD
     "test": "tape test/*.js",
+=======
+    "test": "tape test/*.js | tap-spec",
+>>>>>>> master
     "start": "node server/server.js"
   },
   "repository": {

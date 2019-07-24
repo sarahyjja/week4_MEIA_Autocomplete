@@ -12,7 +12,7 @@ if(endpoint.startsWith('/public')){
   fs.readFile(path.join(__dirname, '..', endpoint), (error, file) => {
       if(error){
         response.end()
-      }else{
+      } else {
         response.writeHead(200)
         response.end(file)
       }
@@ -37,9 +37,5 @@ if(endpoint.startsWith('/public')){
 
  }
 }
-
-
-
-
 
 module.exports = router
