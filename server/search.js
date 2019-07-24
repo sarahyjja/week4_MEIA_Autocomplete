@@ -1,4 +1,4 @@
 const search = () => {
-    return [];
+    return ["",""];
 }
 module.exports=search;
