@@ -11,3 +11,9 @@ test('return array returns just strings',(t)=>{
     t.equal(actual,true)
     t.end();
 })
+
+test('should return empty array if empty string passed',(t)=>{
+    const actual=search('');
+    t.deepEqual(actual,[]);
+    t.end();
+})
