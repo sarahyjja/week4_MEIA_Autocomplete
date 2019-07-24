@@ -29,3 +29,8 @@ test('should return real answer for "Po"',(t)=>{
     t.deepEqual(actual,["Poland","Portugal"]);
     t.end();
 })
+test('should return real answer for "Ja"',(t)=>{
+    const actual=search('Po');
+    t.deepEqual(actual,["Jamaica","Japan"]);
+    t.end();
+})
