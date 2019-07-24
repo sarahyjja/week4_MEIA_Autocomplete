@@ -30,6 +30,7 @@ if(endpoint.startsWith('/public')){
   let queryObject=querystring.parse(urlObject.query);
   //takes the value ('fluffyunicorn') of the 'q' property of queryObject
   let searchTerm=queryObject.q;
+  //calls search function, passing in the searchTerm. it returns a filtered array.
   let result=search(searchTerm);
   //tells the browser to expect a json file
   response.writeHead(200,{'content-type':'application/json'})
