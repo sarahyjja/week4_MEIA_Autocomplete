@@ -9,7 +9,9 @@ As a user visiting this site, I should be able to
 - [ ]See an **updated list** of suggestions each time I input a new character into the search field
 - [ ]Have results that ignore any special characters and still give me suggestions based on the letters in my search field
 
-### User Journey
+### User Journey/Project Whiteboarding (white paper-ing to be precise)
+
+![app architecture draft](https://i.imgur.com/yLF5mKH.jpg)
 
 ### Build Goals
 
