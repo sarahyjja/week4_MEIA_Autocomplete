@@ -1,6 +1,7 @@
 const search = require('../server/search')
 const test = require('tape')
 
-test('the function take a string and return an array', function(t){
-    t.equal(search(''), typeof [])
+test('the function returns an array', function(t){
+    t.equal(Array.isArray(search('a')), true)
+    t.end();
 })
