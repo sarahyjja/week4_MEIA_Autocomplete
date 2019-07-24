@@ -3,6 +3,6 @@ const search = (term) => {
     if (term===''){
         return [];
     }
-    return ["Poland","Portugal"]
+    return data.filter(country=>country.toLowerCase().startsWith(term.toLowerCase()))
 }
 module.exports=search;

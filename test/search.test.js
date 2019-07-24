@@ -1,5 +1,5 @@
-const search = require('../server/search')
-const test = require('tape')
+const search = require('../server/search');
+const test = require('tape');
 
 test('the function returns an array', (t)=>{
     t.equal(Array.isArray(search('a')), true)
@@ -30,7 +30,17 @@ test('should return real answer for "Po"',(t)=>{
     t.end();
 })
 test('should return real answer for "Ja"',(t)=>{
-    const actual=search('Po');
+    const actual=search('Ja');
+    t.deepEqual(actual,["Jamaica","Japan"]);
+    t.end();
+})
+test('should return real answer for other cases like lowercase "ja"',(t)=>{
+    const actual=search('ja');
+    t.deepEqual(actual,["Jamaica","Japan"]);
+    t.end();
+})
+test('should return real answer for other cases like mixted lowercase "ja"',(t)=>{
+    const actual=search('jA');
     t.deepEqual(actual,["Jamaica","Japan"]);
     t.end();
 })
