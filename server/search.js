@@ -3,6 +3,6 @@ const search = (term) => {
     if (term===''){
         return [];
     }
-    return ["pol","por"]
+    return ["Poland","Portugal"]
 }
 module.exports=search;
