@@ -1,3 +1,10 @@
 body {
   background-color: pink;
 }
+.highlighted{
+  border: 2px solid red;
+}
+/*experimental highlight feature*/
+.remaining-text{
+  /* color: grey; */
+}
