@@ -17,7 +17,8 @@ const router = (request, response) => {
     css: "text/css",
     js: "text/javascript",
     ico: "image/x-icon",
-    json: "application/json"
+    json: "application/json",
+    gif: "image/gif"
   };
 
   if (endpoint.startsWith("/")) {
