@@ -38,7 +38,15 @@ const populateSuggestionBox = () => {
   suggestionsArray.forEach((suggestion, i) => {
     const liElement = document.createElement("li");
     liElement.classList.add("suggestion-item");
-    liElement.textContent = suggestion;
+    const matchingText=document.createElement("span");
+    matchingText.classList.add("matching-text");
+    matchingText.textContent=suggestion.slice(0,searchBox.value.length);
+    const remainingText=document.createElement("span");
+    remainingText.classList.add("remaining-text");
+    remainingText.textContent=suggestion.slice(searchBox.value.length);
+    console.log('REMAINING TEXT',suggestion.slice(searchBox.value.length))
+    liElement.appendChild(matchingText);
+    liElement.appendChild(remainingText);
     //adds highlight class to the element at the index decided by listNavCounter
     //this index changes when arrow keys are used for navigating and the UL is rerendered each time
     if(i===listNavCounter){
