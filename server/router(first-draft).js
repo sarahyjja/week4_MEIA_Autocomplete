@@ -6,6 +6,7 @@ const search=require('./search');
 
 const router = (request, response) => {
 let endpoint = request.url
+
 if(endpoint === '/'){
   endpoint = '/public/index.html'
  }
