@@ -50,9 +50,7 @@ body {
   margin-left: 0.5rem;
   border: none;
 }
-.suggestions-box {
-  position: absolute;
-}
+
 .suggestion-item {
   padding: 1rem;
   background-color: #f8f8f880;
