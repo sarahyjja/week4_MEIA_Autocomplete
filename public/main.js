@@ -14,8 +14,20 @@ searchBox.addEventListener('input', (e) => {
     {
       responseArray=JSON.parse(xhr.responseText);
       console.log(responseArray);
+      populateSuggestionBox(responseArray)
     }
   };
   xhr.open ('GET', searchUrl, true);
   xhr.send();
 })
+
+const populateSuggestionBox=(suggestionsArray)=>{
+    const UlElement=document.querySelector('.suggestions-box');
+    UlElement.innerHTML="";
+    suggestionsArray.forEach(suggestion=>{
+      const liElement=document.createElement('li');
+      liElement.classList.add('suggestion-item');
+      liElement.textContent=suggestion;
+      UlElement.appendChild(liElement);
+    })
+}
