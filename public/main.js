@@ -10,16 +10,15 @@ console.log({ searchBox });
 // react to change of searchBox value and make request
 const changeValue = () => {
   let searchTerm = searchBox.value;
-  console.log(searchTerm + ".");
   let xhr = new XMLHttpRequest();
   //example search endpoint : /search?q=fluffyunicorn
   let searchUrl = `/search?q=${encodeURIComponent(searchTerm)}`;
-  console.log(searchUrl);
+  console.log('url for search get request: ',searchUrl);
   xhr.onreadystatechange = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       //populate suggestionsArray with parsed JSON response
       suggestionsArray = JSON.parse(xhr.responseText);
-      console.log(suggestionsArray);
+      console.log('suggestions Array: ',suggestionsArray);
       //fill DOM with li elements created from suggestionsArray
       populateSuggestionBox();
     }
@@ -45,7 +44,6 @@ const populateSuggestionBox = () => {
     const remainingText=document.createElement("span");
     remainingText.classList.add("remaining-text");
     remainingText.textContent=suggestion.slice(searchBox.value.length);
-    console.log('REMAINING TEXT',suggestion.slice(searchBox.value.length))
     liElement.appendChild(matchingText);
     liElement.appendChild(remainingText);
     //adds highlight class to the element at the index decided by listNavCounter
@@ -64,7 +62,7 @@ const chooseSuggestion = event => {
   searchBox.value = value;
   searchBox.focus();
   changeValue();
-  console.log(value);
+  console.log('Value of clicked element',value);
 };
 
 //callback to handle navigation keypresses(arrow keys).
