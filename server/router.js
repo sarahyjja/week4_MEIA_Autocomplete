@@ -38,7 +38,7 @@ const router = (request, response) => {
     let queryObject = querystring.parse(urlObject.query);
     let searchTerm = queryObject.q;
     let result = search(searchTerm);
-    response.writeHead(200, { "content-type": 'application/json' });
+    response.writeHead(200, { "content-type": extensionType[extension] });
     response.end(JSON.stringify(result));
   }
 };
