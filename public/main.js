@@ -58,9 +58,17 @@ const chooseSuggestion = event => {
 //callback to handle navigation keypresses(arrow keys).
 //updates listNavCounter and calls populateSuggestionBox function to rerender suggestions list.
 const navigateList= (e) =>{
-  if(e.keyCode==40){
+  if(e.keyCode==40 && listNavCounter<suggestionsArray.length-1){
     listNavCounter+=1;
     populateSuggestionBox();
+  }
+  if(e.keyCode==38 && listNavCounter>-1){
+    listNavCounter-=1;
+    populateSuggestionBox();
+  }
+  if(e.keyCode==13 && listNavCounter!==-1){
+    chooseSuggestion({target:document.querySelector('.highlighted')})
+    listNavCounter=-1;
   }
 }
 //eventlistener for navigating search queries with keyboard
