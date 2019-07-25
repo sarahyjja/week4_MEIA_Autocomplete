@@ -7,7 +7,7 @@ const search = (term) => {
     return data.filter(country=>{
         let countryLowerCase=country.toLowerCase()
         let termLowerCase=term.toLowerCase();
-        return (countryLowerCase.startsWith(termLowerCase)&&termLowerCase!==countryLowerCase)
+            return (countryLowerCase.startsWith(termLowerCase)&&termLowerCase!==countryLowerCase)
     })
 }
 module.exports=search;
