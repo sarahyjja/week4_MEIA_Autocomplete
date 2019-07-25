@@ -26,8 +26,11 @@ const changeValue = () => {
   xhr.open("GET", searchUrl, true);
   xhr.send();
 };
+
 //when there is an input, change the value of searchTerm and make a new request inside changeValue
 searchBox.addEventListener("input", changeValue);
+
+
 //create li elements for each suggestion
 const populateSuggestionBox = () => {
   const UlElement = document.querySelector(".suggestions-box");
@@ -60,11 +63,14 @@ const chooseSuggestion = event => {
 const navigateList= (e) =>{
   if(e.keyCode==40 && listNavCounter<suggestionsArray.length-1){
     listNavCounter+=1;
+    e.preventDefault();
     populateSuggestionBox();
   }
   if(e.keyCode==38 && listNavCounter>-1){
     listNavCounter-=1;
+    e.preventDefault();
     populateSuggestionBox();
+
   }
   if(e.keyCode==13 && listNavCounter!==-1){
     chooseSuggestion({target:document.querySelector('.highlighted')})
