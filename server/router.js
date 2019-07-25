@@ -21,7 +21,7 @@ const router = (request, response) => {
     gif: "image/gif"
   };
 
-  if (endpoint.startsWith("/")) {
+  if (endpoint.startsWith("/public")) {
     fs.readFile(filePath, (error, file) => {
       if (error) {
         response.writeHead(500, { "content-type": "text/html" });
