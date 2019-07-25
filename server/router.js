@@ -1,8 +1,9 @@
 const fs = require("fs");
-const http = require("http");
+// const http = require("http");
 const path = require("path");
 const url = require("url");
-const queryString = require("querystring");
+const querystring = require("querystring");
+const search = require('./search');
 
 const router = (request, response) => {
 
@@ -17,7 +18,8 @@ const router = (request, response) => {
     html: 'text/html',
     css: 'text/css',
     js: 'text/javascript',
-    ico: 'image/x-icon'
+    ico: 'image/x-icon',
+    json: 'application/json'
   };
 
   if (endpoint.startsWith("/")) {
@@ -26,16 +28,20 @@ const router = (request, response) => {
         response.writeHead(500, {'content-type': 'text/html'});
         response.end("Sorry we had a problem with our server");
       } else {
-         response.writeHead(200, {'content-type': extensionType[extension]});
+        response.writeHead(200, {'content-type': extensionType[extension]});
         response.end(file);
       }
     })
   }
+
+if (endpoint.startsWith('/search')) {
+  let urlObject = url.parse(endpoint);
+  let queryObject = querystring.parse(urlObject.query);
+  let searchTerm = queryObject.q;
+  let result = search(searchTerm);
+  response.writeHead(200, {'content-type': extensionType[extension]})
+  response.end(JSON.stringify(result));
 }
-
-if(endpoint.startsWith('/search')){
-  let urlWithoutQuote = url.parse(endpoint)
-
 }
 
 module.exports = router;
