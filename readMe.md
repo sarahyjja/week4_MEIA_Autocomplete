@@ -1,5 +1,5 @@
 # Autocomplete App
-![Imgur](https://i.imgur.com/v8SuiIH.png)
+![Imgur](https://i.imgur.com/tLgSL0s.png)
 ## Project Description
 A simple autocomplete widget that accepts a search input and shows an auto-updating list of completed inputs.
 Specifically it uses the list of countries and gives the opportunity to visit that country Wikipedia.
