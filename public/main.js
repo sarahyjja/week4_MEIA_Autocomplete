@@ -29,5 +29,11 @@ const populateSuggestionBox=(suggestionsArray)=>{
       liElement.classList.add('suggestion-item');
       liElement.textContent=suggestion;
       UlElement.appendChild(liElement);
+      liElement.addEventListener('click',chooseSuggestion)
     })
+}
+const chooseSuggestion = (event)=>{
+  const value=event.target.textContent;
+  searchBox.value=value;
+  console.log(value);
 }
