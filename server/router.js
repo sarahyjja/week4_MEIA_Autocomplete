@@ -34,7 +34,7 @@ const router = (request, response) => {
 }
 
 if(endpoint.startsWith('/search')){
-
+  let urlWithoutQuote = url.parse(endpoint)
 
 }
 
