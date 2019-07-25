@@ -32,10 +32,20 @@ Stretch Goals:
 - [x] Build a frontend side that consumes /search API
 - [x] Work on style and accessibility
 
-## Learning opportunities
+## The team
 
-- You need four to make a quadruple
+- We need to be four to make a quadruple!
 
 ![](https://media.giphy.com/media/7J7lzuNFHfvqUd52hF/giphy.gif)
 
+  Reuben (in green)
+  Andy (in blue)
+  Jan (in red)
+  Sarah (in yellow)
+  
+## Learning opportunities
+
+- Learning how to create a server from the scratch
+- Working on the differents directories
 - Front-end: plenty of new listeners 
+- Keeping the design simple, clear and user-friendly
