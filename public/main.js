@@ -8,6 +8,7 @@ searchBox.focus();
 
 // react to change of searchBox value and make request
 const changeValue = () => {
+  listNavCounter-=1;
   let searchTerm = searchBox.value;
   let xhr = new XMLHttpRequest();
   //example search endpoint : /search?q=fluffyunicorn

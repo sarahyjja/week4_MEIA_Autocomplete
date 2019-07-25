@@ -1,10 +1,64 @@
+* {
+  outline: none;
+}
 body {
-  background-color: pink;
+  /* background-color: pink; */
+  margin: 20vh auto;
+  max-width: 600px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 1rem;
+}
+.img-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.globe-img{
+  width: 100px;
+  margin: 0.5rem auto;
+}
+.main-title {
+  text-align: center;
+  font-size:2rem;
+  margin-bottom:1rem;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.search-wrapper {
+  display: flex;
+  max-width: 600px;
+}
+[name="search-box"]{
+  flex-grow: 1;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 1px solid #666;
 }
 .highlighted{
-  border: 2px solid red;
+  font-weight: bold;
 }
 /*experimental highlight feature*/
 .remaining-text{
   /* color: grey; */
+}
+.wikipedia-button {
+  color:inherit;
+  background-color:#003459;
+  cursor: pointer;
+  color:white;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin-left: 0.5rem;
+  border: none;
+}
+.suggestion-box {
+  position: absolute;
+}
+.suggestion-item {
+  padding: 1rem;
+  background-color: #f8f8f880;
+  cursor: pointer;
+}
+.suggestion-item:hover {
+  background-color: #0E7091;
+  color:white;
 }
