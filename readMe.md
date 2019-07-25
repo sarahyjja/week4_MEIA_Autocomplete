@@ -1,22 +1,41 @@
-## Autocomplete App
+# Autocomplete App
+![Imgur](https://i.imgur.com/v8SuiIH.png)
+## Project Description
+A simple autocomplete widget that accepts a search input and shows an auto-updating list of completed inputs.
+Specifically it uses the list of countries and gives the opportunity to visit that country Wikipedia.
 
-### Project Description
-A simple autocomplete widget that accepts a search input and shows an auto-updating list of completed inputs
+## User stories 
 
 As a user visiting this site, I should be able to
-- [ ] Type in a query into a search input
-- [ ] See a list of suggested queries that start with the text I entered
-- [ ] See an **updated list** of suggestions each time I input a new character into the search field
-- [ ] Have results that ignore any special characters and still give me suggestions based on the letters in my search field
+- [x] Type in a query into a search input
+- [x] See a list of suggested queries that start with the text I entered
+- [x] See an **updated list** of suggestions each time I input a new character into the search field
+- [x] Be able to choose a suggestion from the list with the mouse
 
-### User Journey/Project Whiteboarding (white paper-ing to be precise)
+Stretch Goals:
+- [ ] Use an external API to populate the data
+- [x] Be able to use keyboard to navigate suggestions
+- [x] Use the widget value to navigate to Wikipedia
+
+## User Journey/Project Whiteboarding (white paper-ing to be precise)
 
 ![app architecture draft](https://i.imgur.com/yLF5mKH.jpg)
 
-### Build Goals
+## The Grand Plan
 
-#### 1. Stage 1 - No API
-
-- [ ] Main goal : use hardcoded data and focus on building search functionality
+- [x] Plan out all main pieces of the app
 - [x] Set up file architecture (focus on separation of concerns)
-- [ ] Write server functions (router, handler)
+- [x] Use hardcoded data and focus on building search functionality
+- [x] Write server functions to handle static assets
+- [x] Write server functions to handle /search API call
+- [x] Create a search function using TDD for our server consumption
+- [x] Build a frontend side that consumes /search API
+- [x] Work on style and accessibility
+
+## Learning opportunities
+
+- You need four to make a quadruple
+
+![](https://media.giphy.com/media/7J7lzuNFHfvqUd52hF/giphy.gif)
+
+- Front-end: plenty of new listeners 
