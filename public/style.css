@@ -29,22 +29,22 @@ body {
 .remaining-text{
   /* color: grey; */
 }
-button {
+.wikipedia-button {
   color:inherit;
   background-color:#666;
   cursor: pointer;
   color:white;  
   border: none; 
 }
-ul{
+.suggestion-box {
   position: absolute;
 }
-li {
+.suggestion-item {
   padding: 1rem;
   background-color: #f8f8f880;
   cursor: pointer;
 }
-li:hover {
+.suggestion-item:hover {
   background-color: #888;
   color:white;  
 }
