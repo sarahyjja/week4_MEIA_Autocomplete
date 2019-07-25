@@ -1,5 +1,7 @@
 const searchBox=document.querySelector('input[name="search-box"]');
-console.log(searchBox);
+//focus on searchBox by default
+searchBox.focus();
+console.log({searchBox});
 searchBox.addEventListener('input', (e) => {
   let searchTerm = e.target.value;
   console.log(searchTerm+".");
@@ -14,6 +16,6 @@ searchBox.addEventListener('input', (e) => {
       console.log(responseArray);
     }
   };
-  xhr.open ('GET', searchUrl, true)
-  xhr.send()
+  xhr.open ('GET', searchUrl, true);
+  xhr.send();
 })
