@@ -32,17 +32,10 @@ const router = (request, response) => {
     })
   }
 }
-  //
-  // if (endpoint.startsWith("/public")) {
-  //   fs.readFile(filePath, (error, file) => {
-  //     if (error) {
-  //       response.writeHead(500, {'content-type': 'text/html'});
-  //       response.end("Sorry we had a problem with our server");
-  //     } else {
-  //       response.writeHead(200, {'content-type': 'text/css'});
-  //       response.end(file);
-  //     }
-  //   })
-  // }
+
+if(endpoint.startsWith('/search')){
+
+
+}
 
 module.exports = router;
