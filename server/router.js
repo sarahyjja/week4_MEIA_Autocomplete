@@ -3,23 +3,36 @@ const http = require("http");
 const path = require("path");
 
 const router = (request, response) => {
+
   let endpoint = request.url;
-  if(endpoint === '/'){
+  if (endpoint === '/') {
     endpoint = '/public/index.html'
-   }
+  }
+  const filePath = path.join(__dirname, '..', endpoint);
 
-    const filePath = path.join(__dirname, '..', endpoint);
-
-    if(endpoint.startsWith("/public")){
+  if (endpoint.startsWith("/public")) {
     fs.readFile(filePath, (error, file) => {
       if (error) {
-        response.writeHead(500, { 'content-type': 'text/html' });
+        response.writeHead(500, {'content-type': 'text/html'});
         response.end("Sorry we had a problem with our server");
       } else {
-        response.writeHead(200, { 'content-type': 'text/html' });
+        // response.writeHead(200, {'content-type': 'text/html'});
         response.end(file);
       }
     })
   }
 }
+  //
+  // if (endpoint.startsWith("/public")) {
+  //   fs.readFile(filePath, (error, file) => {
+  //     if (error) {
+  //       response.writeHead(500, {'content-type': 'text/html'});
+  //       response.end("Sorry we had a problem with our server");
+  //     } else {
+  //       response.writeHead(200, {'content-type': 'text/css'});
+  //       response.end(file);
+  //     }
+  //   })
+  // }
+
 module.exports = router;
