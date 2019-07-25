@@ -10,13 +10,21 @@ const router = (request, response) => {
   }
   const filePath = path.join(__dirname, '..', endpoint);
 
-  if (endpoint.startsWith("/public")) {
+  const extension = endpoint.split('.')[1];
+  const extensionType = {
+    html: 'text/html',
+    css: 'text/css',
+    js: 'text/javascript',
+    ico: 'image/x-icon'
+  };
+
+  if (endpoint.startsWith("/")) {
     fs.readFile(filePath, (error, file) => {
       if (error) {
         response.writeHead(500, {'content-type': 'text/html'});
         response.end("Sorry we had a problem with our server");
       } else {
-        // response.writeHead(200, {'content-type': 'text/html'});
+         response.writeHead(200, {'content-type': extensionType[extension]});
         response.end(file);
       }
     })
