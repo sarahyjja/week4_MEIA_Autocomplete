@@ -1,4 +1,5 @@
 const searchBox = document.querySelector('input[name="search-box"]');
+const wikiButton = document.querySelector('.wikipedia-button')
 let suggestionsArray=[];
 //counter to store position of highlighted item in list
 let listNavCounter = -1;
@@ -59,7 +60,7 @@ const populateSuggestionBox = () => {
 
 // event handler for choosing a suggestion and updating value when clicked
 const chooseSuggestion = event => {
-  const value = event.target.textContent;
+  const value = event.currentTarget.textContent;
   searchBox.value = value;
   searchBox.focus();
   changeValue();
@@ -89,10 +90,15 @@ const navigateList= (e) =>{
     //we are just passing it an object with a property 'target', which has a value of the highlighted element.
     //e.target within chooseSuggestion is the currently highlighted element
     //so the function updates the searchBox with the currently highlighted suggestion's value
-    chooseSuggestion({target:document.querySelector('.highlighted')})
+    chooseSuggestion({currentTarget:document.querySelector('.highlighted')})
     //resets listNavCounter to 1
     listNavCounter=-1;
   }
 }
 //eventlistener for navigating search queries with keyboard
-searchBox.addEventListener('keydown', navigateList)
+searchBox.addEventListener('keydown', navigateList);
+
+
+wikiButton.addEventListener('click',()=>{
+  window.location.href="https://en.wikipedia.org/wiki/"+searchBox.value;
+})
