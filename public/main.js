@@ -62,18 +62,27 @@ const chooseSuggestion = event => {
 //updates listNavCounter and calls populateSuggestionBox function to rerender suggestions list.
 const navigateList= (e) =>{
   if(e.keyCode==40 && listNavCounter<suggestionsArray.length-1){
+    //increments listNavCounter
     listNavCounter+=1;
+    //preventing default behavior of up arrow which is to move the cursor around in the textbox(which still has focus)
     e.preventDefault();
     populateSuggestionBox();
   }
   if(e.keyCode==38 && listNavCounter>-1){
+    //decrements listNavCounter
     listNavCounter-=1;
+    //again preventing default behavior of moving the cursor in the textbox
     e.preventDefault();
     populateSuggestionBox();
 
   }
   if(e.keyCode==13 && listNavCounter!==-1){
+    //hacking the chooseSuggestion function, instead of using it as an event listener callback,
+    //we are just passing it an object with a property 'target', which has a value of the highlighted element.
+    //e.target within chooseSuggestion is the currently highlighted element
+    //so the function updates the searchBox with the currently highlighted suggestion's value
     chooseSuggestion({target:document.querySelector('.highlighted')})
+    //resets listNavCounter to 1
     listNavCounter=-1;
   }
 }
