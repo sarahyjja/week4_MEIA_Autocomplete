@@ -8,7 +8,7 @@ searchBox.focus();
 
 // react to change of searchBox value and make request
 const changeValue = () => {
-  listNavCounter-=1;
+  listNavCounter = -1;
   let searchTerm = searchBox.value;
   let xhr = new XMLHttpRequest();
   //example search endpoint : /search?q=fluffyunicorn
@@ -59,7 +59,6 @@ const chooseSuggestion = event => {
   searchBox.value = value;
   searchBox.focus();
   changeValue();
-  console.log("Value of clicked element", value);
 };
 
 //callback to handle navigation keypresses(arrow keys).
