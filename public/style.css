@@ -1,3 +1,6 @@
 body {
   background-color: pink;
 }
+.highlighted{
+  border: 2px solid red;
+}
