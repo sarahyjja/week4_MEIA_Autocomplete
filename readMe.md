@@ -4,6 +4,12 @@
 A simple autocomplete widget that accepts a search input and shows an auto-updating list of completed inputs.
 Specifically it uses the list of countries and gives the opportunity to visit that country Wikipedia.
 
+## Installation
+
+1 - Clone the repository
+
+2 - Run `npm install` -> that will install all the dependencies for you :)
+
 ## User stories 
 
 As a user visiting this site, I should be able to
@@ -41,10 +47,10 @@ Stretch Goals:
 
 ![](https://media.giphy.com/media/7J7lzuNFHfvqUd52hF/giphy.gif)
 
-  Reuben (in green)
-  Andy (in blue)
-  Jan (in red)
-  Sarah (in yellow)
+  * Reuben (in green)
+  * Andy (in purple)
+  * Jan (in red)
+  * Sarah (in yellow)
   
 ## Learning opportunities
 
