@@ -39,7 +39,7 @@ body {
 }
 /*experimental highlight feature*/
 .remaining-text{
-  color: grey;
+  color:#0E7091;
 }
 .wikipedia-button {
   color:inherit;
@@ -60,4 +60,7 @@ body {
 .suggestion-item:hover {
   background-color: #0E7091;
   color:white;
+}
+.suggestion-item:hover .remaining-text {
+  color:black;
 }
