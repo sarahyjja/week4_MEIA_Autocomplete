@@ -1,6 +1,4 @@
 const http = require('http')
-const fs = require('fs')
-const path = require('path')
 const router = require('./router')
 
 const server = http.createServer(router)
