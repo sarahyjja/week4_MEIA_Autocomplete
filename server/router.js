@@ -34,6 +34,8 @@ const router = (request, response) => {
   }
 
   if (endpoint.startsWith("/search")) {
+    //example search endpoint : /search?q=fluffyunicorn
+    //splits url into different parts and extracts searchTerm 'fluffyunicorn'
     let urlObject = url.parse(endpoint);
     let queryObject = querystring.parse(urlObject.query);
     let searchTerm = queryObject.q;
