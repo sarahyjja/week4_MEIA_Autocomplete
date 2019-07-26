@@ -32,6 +32,9 @@ Stretch Goals:
 - [x] Build a frontend side that consumes /search API
 - [x] Work on style and accessibility
 
+![](https://camo.githubusercontent.com/2a314c10d0ee56ded27bbecd9e7541a5307b8b3a/68747470733a2f2f692e696d6775722e636f6d2f4143314e6473792e706e67)
+
+
 ## The team
 
 - We need to be four to make a quadruple!
