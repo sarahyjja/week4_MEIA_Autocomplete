@@ -4,12 +4,19 @@ const url = require("url");
 const querystring = require("querystring");
 const search = require("./search");
 
+
 const router = (request, response) => {
+    console.log('this is request: ', request)
+  console.log('this is request.url', request.url)
   let endpoint = request.url;
   if (endpoint === "/") {
     endpoint = "/public/index.html";
   }
+console.log('this is __dirname: ', __dirname)
+console.log('this is endpoint: ', endpoint)
   const filePath = path.join(__dirname, "..", endpoint);
+
+  console.log('this is file path: ', filePath)
 
   const extension = endpoint.split(".")[1];
   const extensionType = {

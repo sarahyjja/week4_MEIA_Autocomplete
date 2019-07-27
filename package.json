@@ -10,9 +10,11 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "xhr2": "*"
+  },
   "scripts": {
-    "test": "tape test/*.js | tap-spec",
+    "test": "tape test/*.test.js | tap-spec",
     "start": "node server/server.js"
   },
   "repository": {

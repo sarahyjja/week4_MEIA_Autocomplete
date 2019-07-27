@@ -7,10 +7,24 @@ test('the function returns an array', (t)=>{
 })
 
 test('return array returns just strings',(t)=>{
-    const actual=search("Po").every(item=>typeof item==='string');
+    const actual = search("Po").every(item=>typeof item==='string');
     t.equal(actual,true)
     t.end();
 })
+
+// my test
+
+test('Sarah - return array returns just strings',(t)=>{
+    const searchArray = search("Po");
+    const isThisAString = (item) => {
+      return typeof item === 'string';
+    }
+    const doesSearchArrayContainAllStrings = searchArray.every(item => isThisAString(item))
+
+    t.equal(doesSearchArrayContainAllStrings, true)
+    t.end();
+})
+
 
 test('should return empty array if empty string passed',(t)=>{
     const actual=search('');
